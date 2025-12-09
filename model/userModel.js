@@ -6,6 +6,13 @@ const mySchema = new Schema({
     name: String,
     email: String,
     password: String,
+    role: {
+        type: String,
+        required: true,
+        default: 'user',
+        lowercase: true,
+        trim: true,
+    },
     allergy: {
         type: Schema.Types.ObjectId,
         // A que tabla está referenciando

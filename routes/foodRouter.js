@@ -7,7 +7,6 @@ const foodController = new foodControllerClass();
 router.get('/', auth, foodController.getFood);
 router.get('/:id', auth, foodController.getFoodById);
 router.get('/name/:name', auth, foodController.getFoodByName);
-router.get('/search/:query', auth, foodController.search);
 router.get('/ingredient/:ingredient', auth, foodController.getFoodByIngredient);
 router.get('/allergen/:allergen', auth, foodController.getFoodsThaDoBotContainAllergen);
 router.post('/', auth, foodController.addFood);

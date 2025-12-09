@@ -154,19 +154,6 @@ class foodController {
         }
     }
 
-    async search(req, res) {
-        const myRes = new Response();
-
-        try {
-            const { query } = req.params
-
-            // TODO... 
-            // I'm not doing this rn (Doc: https://www.mongodb.com/docs/atlas/atlas-search/)
-        } catch (err) {
-            myRes.generateResponseFalse(res, 'Algo salió mal durante la búsqueda', '[foodController search()] Failed', 500, err);
-        }
-    }
-
     async getFoodByIngredient(req, res) {
         const myRes = new Response();
         try {
